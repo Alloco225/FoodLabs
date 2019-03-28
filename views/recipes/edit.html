@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+<hr> {% block content %}
+<form  method="POST" action="{{endpoint}}" enctype='multipart/form-data'>
+    <div class="form-group">
+        <label for="name">Nom de la Recette</label>
+        <input type="text" id="name" name="name" class="form-control" value="{{recipe.name}}">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{recipe.description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="file">Image</label>
+        <input type="file" id="file" name="file">
+    </div>
+    <div class="form-group">
+        {% for type in types %}
+        <label for="">
+            <input type="checkbox" class="form-contol" name="types[]" value="{{type._id}}" {% if recipe.types.indexOf(type._id) != -1 %}checked{% endif %}>{{type.name}}
+        </label>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {% for ingredient in ingredients %}
+        <label for="">
+            <input type="checkbox" class="form-contol" name="ingredients[]" value="{{ingredient._id}}" {% if recipe.ingredients.indexOf(ingredient._id) != -1 %}checked{% endif %}>{{ingredient.name}}
+        </label>
+        {% endfor %}
+    </div>
+    <input type="submit" class="btn btn-primary" value="Enregistrer">
+</form>
+{% endblock %}

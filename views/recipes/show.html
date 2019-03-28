@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="/uploads/{{recipe.picture}}" alt="{{recipe.name}}" width="100%">
+        </div>
+        <div class="col-sm-9">
+            <h2>{{ recipe.name }}</h2>
+            <p class="lead">
+                {{recipe.description}}
+            </p>
+            <a href="/edit/{{recipe._id}}" class="btn btn-success">Editer</a>
+            <a href="/delete/{{recipe._id}}" class="btn btn-danger">Supprimer</a>
+            <h4>Types :</h4>
+            {% for t in recipe.types %}
+            <span style="color:#fff;" class="badge badge-default">
+                {{t.name}}
+            </span>
+            {% endfor %}
+            <h4>Ingredients :</h4>
+            {% for i in recipe.ingredients %}
+            <span class="badge badge-default">
+                {{i.name}}
+            </span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

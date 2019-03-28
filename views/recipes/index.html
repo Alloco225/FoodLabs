@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+    <div class="row justify-content-between">
+        <h2>Recettes</h2>
+        <a href="/new" class="btn btn-primary align-self-end">Ajouter une recette</a>
+    </div>
+    <div class="container my-2 d-flex">
+        {% for r in recipes %}
+        <div class="col-4 col-md">
+            <div class="card" style="height:20rem!important;">
+                <a href="/{{r.id}}">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">{{r.name}}</h3>
+                    </div>
+        
+                    <img src="/uploads/{{r.picture}}" alt="{{r.name}}" class="card-img-top" width="100%">
+                </a>
+                    <div class="card-body">
+                        <p class="card-text">{{r.description}}</p>        
+                    </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
