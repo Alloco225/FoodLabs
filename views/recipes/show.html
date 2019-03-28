@@ -5,21 +5,27 @@
             <img src="/uploads/{{recipe.picture}}" alt="{{recipe.name}}" width="100%">
         </div>
         <div class="col-sm-9">
-            <h2>{{ recipe.name }}</h2>
-            <p class="lead">
+            <div class="row justify-content-between">
+                <h2>{{ recipe.name }}</h2>
+                <span>
+                    <a href="/edit/{{recipe._id}}" class="btn btn-success">Editer</a>
+                    <a href="/delete/{{recipe._id}}" class="btn btn-danger">Supprimer</a>
+                </span>
+            </div>
+            <p class="lead ml-2">
                 {{recipe.description}}
             </p>
-            <a href="/edit/{{recipe._id}}" class="btn btn-success">Editer</a>
-            <a href="/delete/{{recipe._id}}" class="btn btn-danger">Supprimer</a>
-            <h4>Types :</h4>
+            <!-- <h4>Types :</h4>
             {% for t in recipe.types %}
             <span style="color:#fff;" class="badge badge-default">
                 {{t.name}}
             </span>
-            {% endfor %}
+            {% endfor %} -->
+
             <h4>Ingredients :</h4>
             {% for i in recipe.ingredients %}
-            <span class="badge badge-default">
+            <span class="badge ">
+                <!-- <img src="/uploads/{{i.icon}}" alt="{{i.name}}"> -->
                 {{i.name}}
             </span>
             {% endfor %}

@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 var ingredientSchema = new mongoose.Schema({
-    name: String
+    name: String //,
+    // icon: String
 });
 
 ingredientSchema.virtual('recipes', {
