@@ -9,7 +9,7 @@
                 <h2>{{ recipe.name }}</h2>
                 <span>
                     <a href="/edit/{{recipe._id}}" class="btn btn-success">Editer</a>
-                    <a href="/delete/{{recipe._id}}" class="btn btn-danger">Supprimer</a>
+                    <a href="/delete/{{recipe._id}}" class="btn btn-danger" onclick="return confirm('Voulez vous vraiment supprimer');">Supprimer</a>
                 </span>
             </div>
             <p class="lead ml-2">

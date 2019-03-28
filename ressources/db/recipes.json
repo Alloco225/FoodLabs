@@ -1,0 +1,32 @@
+{ 
+    "_id" : ObjectId("5c9ce6461ae68820547b9c32"), 
+    "name" : "Alloco", 
+    "description" : "Recette de banane plantain bouillies dans de l'huile", 
+    "picture" : "a009df6d6f04bdb7ef1558f9b46f475f", 
+    "__v" : NumberInt(0)
+},
+{ 
+    "_id" : ObjectId("5c9ce7f396ff3a0f0c1e5764"), 
+    "name" : "Dragon food", 
+    "description" : "Delicious dragon food for ya", 
+    "picture" : "2a58dac01d0b22a4ea4b1665a4be958b", 
+    "__v" : NumberInt(1), 
+    "ingredients" : [
+        ObjectId("5c9ceac2db640a05c0f530a6"), 
+        ObjectId("5c9ced86db640a05c0f530a8")
+    ]
+},
+{ 
+    "_id" : ObjectId("5c9ce98d33b691212863ef08"), 
+    "name" : "Garba", 
+    "description" : "Garba :amazed:", 
+    "picture" : "6e92131fa55f182a99a0f2cdf0f70375", 
+    "__v" : NumberInt(1), 
+    "ingredients" : [
+        ObjectId("5c9ceac2db640a05c0f530a6"), 
+        ObjectId("5c9cee53db640a05c0f530ad"), 
+        ObjectId("5c9cee82db640a05c0f530b2"), 
+        ObjectId("5c9cee8edb640a05c0f530b3"), 
+        ObjectId("5c9cee93db640a05c0f530b4")
+    ]
+}
