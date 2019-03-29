@@ -4,8 +4,8 @@ NodeJs project about Food (super aimai :disappointed_relieved: ) from [NaN](www.
 ## Specs
 - [ ] Login/Register ? :weary: Mb dunno, dun have time
 - [x] Dishes list download from DB
-- [x] Like/Upvote system
-- [x] Adding new dishes 
+- [ ] Like/Upvote system
+- [x] CRUD dishes
 - [ ] Some more stuff if got time i guess
 
 ## Progress Log
