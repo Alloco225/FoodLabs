@@ -1,10 +1,20 @@
 {% extends "layout.html" %} {% block content %}
 <div class="container">
-    <h2>Recettes contenant l'ingredient <span>{{ingredient.name}}</span></h2>
+    <div class="row justify-content-between">
+        <h2>Recettes contenant l'ingredient <span>{{ingredient.name}}</span></h2>
+        <a href="/new" class="">
+            <h5>
+                <span class="badge badge-primary">
+                    <i class="fa fa-plus"></i>
+                </span>
+                Ajouter une recette
+            </h5>
+        </a>
+    </div>
     <div class="row">
         <div class="container my-2 d-flex">
             {% for r in recipes %}
-            <div class="col-4 col-md-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card" style="height:20rem!important;">
                     <a href="/{{r.id}}">
                         <div class="card-header">

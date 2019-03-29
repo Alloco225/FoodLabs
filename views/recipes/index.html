@@ -4,6 +4,16 @@
         <h2>Recettes</h2>
         <a href="/new" class="btn btn-primary align-self-end">Ajouter une recette</a>
     </div> -->
+    <div class="container d-flex justify-content-end">
+        <a href="/new" class="">
+            <h5>
+                <span class="badge badge-primary">
+                    <i class="fa fa-plus"></i>
+                </span>
+                Ajouter une recette
+            </h5>
+        </a>
+    </div>
     <div class="row my-2 justify-content-around">
         {% for r in recipes %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -23,4 +33,5 @@
         {% endfor %}
     </div>
 </div>
+<!-- <div class="sidebar"></div> -->
 {% endblock %}
