@@ -26,8 +26,10 @@ app.use(bodyParser.urlencoded({
 app.use(upload.single('file'));
 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/ressources', express.static(__dirname + '/ressources'));
 app.use('/', require('./routes/recipes'));
-app.use('/types', require('./routes/types'));
+// app.use('/types', require('./routes/types'));
 app.use('/ingredients', require('./routes/ingredients'));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));

@@ -6,22 +6,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
+    <link rel="icon" href="/ressources/icons/FoodLabs_icon.png">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container">
-        <a href="/">
-            <h1>Food labs</h1>
+    <nav class="navbar px-md-5 justify-content-between bg-dark navbar-dark bg-light border border-secondary">
+        <a href="/" class="nav-brand col-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
+            <img src="/ressources/icons/FoodLabs_icon_text.png" alt="" width="100%">
         </a>
-        <div>
-            {% block content %}{% endblock%}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav text-dark">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Recettes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/new" class="nav-link">Nouvelle Recette</a>
+                </li>
+                <li class="nav-item">
+                    <a href="##" class="nav-link disabled">Ingredients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="_#" class="nav-link disabled">Connexion</a>
+                </li>
+            </ul>
         </div>
-        <hr>
-
-        <div class="row text-center">
-            Copyright &copy; 2019
-        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock%}
     </div>
+    <hr>
+
 </body>
 
 </html>
